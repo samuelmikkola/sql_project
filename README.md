@@ -1,16 +1,16 @@
-# 🚌 HSL Public Transit Database
+#  HSL Public Transit Database
 
 A relational database system modelling the operations of a public transport operator (inspired by HSL), built as a university project for the course **CS-A1150 – Tietokannat** at Aalto University.
 
 ---
 
-## 📖 Overview
+##  Overview
 
 This project designs and implements a full relational database for managing public transit operations — covering routes, stops, vehicles, drivers, tickets, and passengers. The schema is normalized to **Boyce-Codd Normal Form (BCNF)** and includes realistic sample data, indexes, views, and a variety of SQL queries demonstrating real-world use cases.
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 ├── createtable.sql       # Schema creation, indexes, view, and sample data inserts
@@ -20,7 +20,7 @@ This project designs and implements a full relational database for managing publ
 
 ---
 
-## 🧱 Database Schema
+##  Database Schema
 
 The database consists of **17 tables** covering the following domains:
 
@@ -41,7 +41,7 @@ The database consists of **17 tables** covering the following domains:
 
 ---
 
-## 🔍 Sample Queries
+##  Sample Queries
 
 A selection of the use cases implemented in `selectkäskyt.sql`:
 
@@ -79,7 +79,7 @@ WHERE P1.pysäkkiID = 1924 AND P2.pysäkkiID = 2353
 
 ---
 
-## 🗃️ Indexes
+##  Indexes
 
 Five indexes are defined to optimize common access patterns:
 
@@ -93,7 +93,7 @@ Five indexes are defined to optimize common access patterns:
 
 ---
 
-## 👁️ View
+##  View
 
 ```sql
 CREATE VIEW AjokertaInfo AS
@@ -105,7 +105,7 @@ Provides a convenient joined summary of each ride with driver name and vehicle t
 
 ---
 
-## ⚙️ Setup
+##  Setup
 
 The project uses standard SQL and was developed with **SQLite**. To set up:
 
@@ -119,13 +119,13 @@ sqlite3 hsl.db < selectkäskyt.sql
 
 ---
 
-## 📐 Normalization
+##  Normalization
 
 All relations were analyzed for functional dependencies and verified to be in **BCNF** — every non-trivial functional dependency has a superkey on its left-hand side. No decomposition was needed, meaning the schema has no redundancy-driven anomalies.
 
 ---
 
-## 👥 Authors
+##  Authors
 
 - Samuel Mikkola
 - Vesa Holopainen  
